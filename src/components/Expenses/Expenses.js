@@ -2,6 +2,7 @@ import Card from "../User_I/Card";
 import FilterExpenses from "./FilterExpenses";
 import Expenseslist from "./Expenseslist";
 import React, { useState } from "react";
+import ExpenseChart from "./ExpensesChart";
 import "./expenses.css";
 function Expenses(props) {
   const [filterValue, setEnteredfilter] = useState("2020");
@@ -20,7 +21,7 @@ function Expenses(props) {
           selected={filterValue}
           onFilterExpense={addExpenseFilter}
         ></FilterExpenses>
-
+<ExpenseChart expenses={filteresExpenses}></ExpenseChart>
         <Expenseslist items={filteresExpenses}></Expenseslist>
         {/* Static method */}
         {/* <ExpenseItems
