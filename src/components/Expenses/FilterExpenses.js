@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './FilterExpenses.css';
 const FilterExpenses=(props)=>{
     
@@ -6,9 +6,7 @@ const FilterExpenses=(props)=>{
     const onFilterExpense=(event)=>{
         console.log(event.target.value);
         props.onFilterExpense(event.target.value);
-
-
-    }
+}
     return(
         <div className='expenses-filter'>
       <div className='expenses-filter__control' >
